@@ -1,11 +1,12 @@
 library(profvis)
 
 profvis({
-  r <- 3
-  p <- 4
+  r <- 20
+  p <- 10
   u <- u.tru <- 2
+  n <- 200
   param <- generate_par(r, p, u)
-  inputdata <- generate_data(param,100)
-  mcmc.env <- envprobit_BIC(inputdata,u,mcmc.num=10)
+  inputdata <- generate_data(param,n)
+  mcmc.env <- envprobit_BIC(inputdata,u,mcmc.num=5000)
 
 })
