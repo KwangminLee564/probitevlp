@@ -17,7 +17,7 @@
 #' sqrt(mean((scaletoCor(m$beta,m$Sigma)-scaletoCor(param$beta.tru,param$Sigma.tru))^2))
 #' sqrt(mean((scaletoCor(apply(mcmc.out$Betasample,c(1,2),mean),Sigmean)[,-1]-scaletoCor(param$beta.tru,param$Sigma.tru))^2))
 #'
-MCEM_envprobit <- function(inputdata,u,niter=10){
+MCEM_envprobit <- function(inputdata,u,niter=50){
   Y <- inputdata$Y
   X <- inputdata$X
   lbmat <- -1/Y +1

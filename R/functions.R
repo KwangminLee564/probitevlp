@@ -129,9 +129,7 @@ find_A_from_gamma <- function(gamma) {
 }
 
 
-
 scaletoCor <- function(Beta,Sigma){
   diag(diag(Sigma^(-1/2))) %*% Beta
 }
-
 
